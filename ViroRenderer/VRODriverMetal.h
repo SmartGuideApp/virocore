@@ -54,7 +54,7 @@ public:
         _device = device;
         _commandQueue = [device newCommandQueue];
         
-        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit"];
+        NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit.ResourceFiles"];
         NSString *shaders = [bundle pathForResource:@"default" ofType:@"metallib"];
         
         _library = [device newLibraryWithFile:shaders error:nil];

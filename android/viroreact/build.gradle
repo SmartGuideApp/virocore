@@ -21,7 +21,7 @@ android {
             // React Native does not support arm64-v8a yet, so don't bother including
             // it here.
             // Tracking issue for RN: https://github.com/facebook/react-native/issues/2814
-            abiFilters "arm64-v8a", "armeabi-v7a"
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
         }
 
         // Note that viro_arcore does not use STL, so we can still use static STL in viro_native

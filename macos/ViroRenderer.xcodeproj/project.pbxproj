@@ -338,9 +338,6 @@
 		8FA9A1C12075B9110022C55D /* libpng16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA9A1C02075B9100022C55D /* libpng16.a */; };
 		8FA9A1E82075CACE0022C55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9A1E62075CACE0022C55D /* Main.storyboard */; };
 		8FA9A1EA2075CAE90022C55D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9A1E92075CAE90022C55D /* Info.plist */; };
-		8FA9A1EE2075D0B10022C55D /* harfbuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA9A1ED2075D0B10022C55D /* harfbuzz.framework */; };
-		8FA9A1EF2075D0E00022C55D /* harfbuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA9A1ED2075D0B10022C55D /* harfbuzz.framework */; };
-		8FA9A1F02075D0E00022C55D /* harfbuzz.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8FA9A1ED2075D0B10022C55D /* harfbuzz.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8FA9A21B2075D8170022C55D /* brdf_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9A2012075D7C50022C55D /* brdf_fsh.glsl */; };
 		8FA9A21C2075D8170022C55D /* brdf_vsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9A2022075D7C50022C55D /* brdf_vsh.glsl */; };
 		8FA9A21D2075D8170022C55D /* constant_fsh.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 8FA9A1FD2075D7C50022C55D /* constant_fsh.glsl */; };
@@ -724,7 +721,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8FA9A1F02075D0E00022C55D /* harfbuzz.framework in Embed Frameworks */,
 				8F129FA71ECF323300341D83 /* ViroKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -1156,7 +1152,6 @@
 		8FA9A1E72075CACE0022C55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ViroSample/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FA9A1E92075CAE90022C55D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ViroSample/Info.plist; sourceTree = "<group>"; };
 		8FA9A1EB2075CBF40022C55D /* harfbuzz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = harfbuzz.a; path = Libraries/harfbuzz/x86_64/harfbuzz.a; sourceTree = "<group>"; };
-		8FA9A1ED2075D0B10022C55D /* harfbuzz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = harfbuzz.framework; path = Libraries/harfbuzz/x86_64/harfbuzz.framework; sourceTree = "<group>"; };
 		8FA9A1F12075D7C30022C55D /* irradiance_convolution_fsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = irradiance_convolution_fsh.glsl; path = ViroKit/irradiance_convolution_fsh.glsl; sourceTree = SOURCE_ROOT; };
 		8FA9A1F22075D7C40022C55D /* irradiance_convolution_vsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = irradiance_convolution_vsh.glsl; path = ViroKit/irradiance_convolution_vsh.glsl; sourceTree = SOURCE_ROOT; };
 		8FA9A1F32075D7C40022C55D /* skinning_vsh.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = skinning_vsh.glsl; path = ViroKit/skinning_vsh.glsl; sourceTree = SOURCE_ROOT; };
@@ -1458,7 +1453,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FA9A1EF2075D0E00022C55D /* harfbuzz.framework in Frameworks */,
 				8F129FA61ECF323300341D83 /* ViroKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1467,7 +1461,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FA9A1EE2075D0B10022C55D /* harfbuzz.framework in Frameworks */,
 				8FA9A1C12075B9110022C55D /* libpng16.a in Frameworks */,
 				8FA9A1BF2075B7F10022C55D /* OpenGL.framework in Frameworks */,
 				8FA9A1BD207597210022C55D /* AppKit.framework in Frameworks */,
@@ -2455,7 +2448,6 @@
 		95E5BC90E51A0FC2C3AA4D42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FA9A1ED2075D0B10022C55D /* harfbuzz.framework */,
 				8FA9A1EB2075CBF40022C55D /* harfbuzz.a */,
 				8FA9A1C02075B9100022C55D /* libpng16.a */,
 				8FA9A1BE2075B7F00022C55D /* OpenGL.framework */,

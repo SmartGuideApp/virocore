@@ -172,6 +172,12 @@ NSString* const x86_64_Sim  = @"x86_64";
     }
     NSString *path = [deviceUtilBundle pathForResource:@"DeviceList" ofType:@"plist"];
     deviceList = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    if (!deviceList) {
+      path = [deviceUtilBundle pathForResource:@"Frameworks/ViroKit.framework/DeviceList" ofType:@"plist"];
+      deviceList = [NSDictionary dictionaryWithContentsOfFile:path];
+    }
+    
     NSAssert(deviceList != nil, @"DevicePlist not found in the bundle.");
   }
   return self;

@@ -93,8 +93,8 @@ NSURLSessionDataTask *downloadDataWithURLSynchronous(NSURL *url,
                                                      void (^completionBlock)(NSData *data, NSError *error));
 
 std::string VROPlatformGetPathForResource(std::string resource, std::string type) {
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit"];
-    NSString *path = [bundle pathForResource:[NSString stringWithUTF8String:resource.c_str()]
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:[NSString stringWithFormat:@"Frameworks/ViroKit.framework/%@", [NSString stringWithUTF8String:resource.c_str()]]
                                       ofType:[NSString stringWithUTF8String:type.c_str()]];
     
     return std::string([path UTF8String]);

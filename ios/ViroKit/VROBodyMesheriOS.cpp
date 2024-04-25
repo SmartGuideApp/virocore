@@ -113,7 +113,7 @@ cnpy::NpyArray VROBodyMesheriOS::loadNumpyArray(NSString *prefix, NSString *arra
 }
 
 cnpy::NpyArray VROBodyMesheriOS::loadNumpyArray(NSString *name) {
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit"];
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit.ResourceFiles"];
     NSString *texcoordsPath = [bundle pathForResource:name ofType:@"npy"];
     return cnpy::npy_load([texcoordsPath UTF8String]);
 }

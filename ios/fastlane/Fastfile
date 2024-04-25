@@ -41,17 +41,22 @@ platform :ios do
 
 
   lane :virorender_viroreact_virokit do
-    cocoapods
     virorender_viroreact_virokit_framework
-    virorender_viroreact_virokit_static_lib
+    # virorender_viroreact_virokit_static_lib
   end
 
   desc "Build ViroKit framework (release)"
   lane :virorender_viroreact_virokit_framework do
     begin       
+      gym(
+         project: "ViroRenderer.xcodeproj",
+         scheme: "ViroSample",
+         sdk: "iphonesimulator",
+         destination: "platform=iOS Simulator,name=iPhone X",
+      )
        # Clean virokit framework for simulator target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
+          project: "ViroRenderer.xcodeproj",
           scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphonesimulator",
@@ -63,7 +68,7 @@ platform :ios do
 
        # Clean virokit framework for device target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
+          project: "ViroRenderer.xcodeproj",
           scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphoneos",
@@ -74,7 +79,7 @@ platform :ios do
 
        # Build virokit framework for simulator target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
+          project: "ViroRenderer.xcodeproj",
           scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphonesimulator",
@@ -85,7 +90,7 @@ platform :ios do
 
        # Build virokit framework for device target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
+          project: "ViroRenderer.xcodeproj",
           scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphoneos",
@@ -102,8 +107,8 @@ platform :ios do
      
        # Clean virokit framework for simulator target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
-          scheme: "ViroKit_static_lib",
+          project: "ViroRenderer.xcodeproj",
+          scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphonesimulator",
           destination: "platform=iOS Simulator,name=iPhone X",
@@ -114,8 +119,8 @@ platform :ios do
 
        # Clean virokit framework for device target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
-          scheme: "ViroKit_static_lib",
+          project: "ViroRenderer.xcodeproj",
+          scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphoneos",
           skip_package_ipa: true,
@@ -125,11 +130,11 @@ platform :ios do
 
        # Build virokit framework for simulator target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
-          scheme: "ViroKit_static_lib",
+          project: "ViroRenderer.xcodeproj",
+          scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphonesimulator",
-          destination: "platform=iOS Simulator,name=iPhone X",
+          destination: "platform=iOS Simulator,name=iPhone Xs (Rossetta)",
           skip_package_ipa: true,
           skip_archive: true,
           # clean: true,
@@ -137,8 +142,8 @@ platform :ios do
 
        # Build virokit framework for device target
        gym(
-          workspace: "ViroRenderer.xcworkspace",
-          scheme: "ViroKit_static_lib",
+          project: "ViroRenderer.xcodeproj",
+          scheme: "ViroKit",
           configuration: "Release",
           sdk: "iphoneos",
           skip_package_ipa: true,

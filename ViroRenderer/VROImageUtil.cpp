@@ -54,8 +54,9 @@ std::shared_ptr<VROTexture> getPointCloudTexture() {
 #include "VROImageiOS.h"
 
 void initBlankTexture(const VRORenderContext &context) {
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit"];
-    NSString *path = [bundle pathForResource:@"blank" ofType:@"png"];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSLog(@"%@",[bundle infoDictionary]);
+    NSString *path = [bundle pathForResource:@"Frameworks/ViroKit.framework/blank" ofType:@"png"];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     std::shared_ptr<VROImage> wrapper = std::make_shared<VROImageiOS>(image, VROTextureInternalFormat::RGBA8);
@@ -70,8 +71,8 @@ void initPointCloudTexture() {
         return;
     }
 
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit"];
-    NSString *path = [bundle pathForResource:@"point_cloud" ofType:@"png"];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:@"Frameworks/ViroKit.framework/point_cloud" ofType:@"png"];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     
     std::shared_ptr<VROImage> wrapper = std::make_shared<VROImageiOS>(image, VROTextureInternalFormat::RGBA8);
@@ -116,7 +117,7 @@ void initPointCloudTexture() {
 #include "VROImageMacOS.h"
 
 void initBlankTexture(const VRORenderContext &context) {
-    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit"];
+    NSBundle *bundle = [NSBundle bundleWithIdentifier:@"com.viro.ViroKit.ResourceFiles"];
     NSString *path = [bundle pathForResource:@"blank" ofType:@"png"];
     NSImage *image = [[NSImage alloc] initWithContentsOfFile:path];
     
